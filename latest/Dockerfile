@@ -39,11 +39,15 @@ RUN apk add --no-cache \
 # Install PECL and PEAR extensions
 RUN pecl install \
     imagick
+    xdebug
 
 # Install and enable php extensions
 RUN docker-php-ext-enable \
-    imagick
+    imagick \
+    xdebug
+
 RUN docker-php-ext-configure zip --with-libzip
+
 RUN docker-php-ext-install \
     curl \
     iconv \
@@ -56,7 +60,6 @@ RUN docker-php-ext-install \
     tokenizer \
     xml \
     zip \
-    xdebug \
     bcmath \
     exif
 
