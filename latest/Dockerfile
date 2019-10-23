@@ -56,6 +56,7 @@ RUN docker-php-ext-install \
     tokenizer \
     xml \
     zip \
+    xdebug \
     bcmath \
     exif
 
