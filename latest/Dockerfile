@@ -38,7 +38,7 @@ RUN apk add --no-cache \
 
 # Install PECL and PEAR extensions
 RUN pecl install \
-    imagick
+    imagick \
     xdebug
 
 # Install and enable php extensions
