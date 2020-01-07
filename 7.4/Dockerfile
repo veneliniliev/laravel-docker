@@ -40,11 +40,10 @@ RUN pecl install \
 RUN docker-php-ext-enable \
     imagick \
     xdebug
-RUN docker-php-ext-configure zip --with-libzip
+RUN docker-php-ext-configure zip
 RUN docker-php-ext-install \
     curl \
     iconv \
-    mbstring \
     pdo \
     pdo_mysql \
     pdo_pgsql \
