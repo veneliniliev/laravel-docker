@@ -8,7 +8,8 @@ RUN apk add --no-cache --virtual .build-deps \
     libtool \
     libxml2-dev \
     postgresql-dev \
-    sqlite-dev
+    sqlite-dev \
+    oniguruma-dev
 
 # Install production dependencies
 RUN apk add --no-cache \
@@ -44,6 +45,7 @@ RUN docker-php-ext-configure zip
 RUN docker-php-ext-install \
     curl \
     iconv \
+    mbstring \
     pdo \
     pdo_mysql \
     pdo_pgsql \
