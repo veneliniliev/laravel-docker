@@ -19,6 +19,8 @@ RUN apk add --no-cache \
     g++ \
     gcc \
     git \
+    icu-dev \
+    icu-libs \
     imagemagick \
     libc-dev \
     libjpeg-turbo-dev \
@@ -56,6 +58,7 @@ RUN docker-php-ext-install \
     exif \
     gd \
     iconv \
+    intl \
     mbstring \
     pdo \
     pdo_mysql \
